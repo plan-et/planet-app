@@ -1,3 +1,9 @@
+## Wireframes & Icons (Google doc)
+
+Wireframes:  https://docs.google.com/presentation/d/1933aNBkMXDrPobtm2ILjXhyqvSQBW8mtYWIipUfesVE/edit?usp=sharing 
+
+Icons:  https://docs.google.com/document/d/1wc4ld0RcNEejid9gIxzbKYm7qRzWaLuU-s3-2LIWmyw/edit?usp=sharing
+
 ## Available Scripts
 
 In the project directory, you can run:
