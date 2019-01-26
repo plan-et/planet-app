@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
 import './loginScreen.scss'
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
-// import * as loginScreenActions from "../../store/loginScreen/actions";
-export default class loginScreen extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {};
-    // }
-    render() {
-      return <div className="component-login-screen">Hello! component loginScreen</div>;
-    }
+import { connect } from "react-redux";
+import { loginUser, loginSuccess, loginFail } from '../../redux/actions/AuthActions';
+
+class loginScreen extends Component {
+  render() {
+    return (
+    <div>
+      <div>Login</div> 
+      <p>{this.props.loading}</p>
+    </div>
+    )
   }
-// export default connect(
-//     ({ loginScreen }) => ({ ...loginScreen }),
-//     dispatch => bindActionCreators({ ...loginScreenActions }, dispatch)
-//   )( loginScreen );
+}
+
+const mapStateToProps = ({ Auth }) => {
+  const {error, loading} = Auth;
+  return {error, loading};
+}
+
+export default connect(mapStateToProps,{ loginUser, loginSuccess, loginFail })(loginScreen);
