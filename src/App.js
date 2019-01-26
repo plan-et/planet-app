@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
-import './App.css';
+import './App.scss';
 import LoginScreen from './components/loginScreen/loginScreen';
 import MainScreen from './components/mainScreen/mainScreen';
 import LandingScreen from './components/landingScreen/landingScreen';
@@ -11,15 +11,14 @@ import MyEventsScreen from './components/myEventsScreen/myEventsScreen';
 import OverviewScreen from './components/overviewScreen/overviewScreen';
 import SignupScreen from './components/signupScreen/signupScreen';
 import SmallEventScreen from './components/smallEventScreen/smallEventScreen';
-
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <Route exact path="/" component={LoginScreen} />
+          <Route exact path="/" component={LandingScreen} />
           <Route path="/main" component={MainScreen} />
-          <Route path="/landing" component={LandingScreen} />
+          <Route path="/login" component={LoginScreen} />
           <Route path="/createEvent" component={CreateEventScreen} />
           <Route path="/discover" component={DiscoverScreen} />
           <Route path="/largeEvent" component={LargeEventScreen} />

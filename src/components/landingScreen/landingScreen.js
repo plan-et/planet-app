@@ -1,3 +1,4 @@
+import Button from '@material-ui/core/Button';
 import React, {Component} from 'react';
 import './landingScreen.scss'
 // import { connect } from "react-redux";
@@ -9,7 +10,14 @@ export default class landingScreen extends Component {
     //     this.state = {};
     // }
     render() {
-      return <div className="component-landing-screen">Hello! component landingScreen</div>;
+      return <div className="component-landing-screen"><h1>Hello! component landingScreen</h1>
+      
+      <Button className="uploadButton">Login</Button>
+      <Button className="uploadButton">Sign up</Button>
+
+
+      </div>;
+
     }
   }
 // export default connect(
