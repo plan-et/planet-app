@@ -10,10 +10,10 @@ export default class createEventScreen extends Component {
   // }
   render() {
     return <div className="component-create-event-screen">
-      <div className="orange">
+      <div className="orange" style={{"padding":"1%"}}>
         <h1 className="center">
           <div style={{"display":"flex", "justifyContent":"center"}}>
-            <span><img src={require("./Create-Icon.png")} /></span>
+            <img src={require("./Create-Icon.png")} />
             <span>Create Event</span>
             </div>
         </h1>
