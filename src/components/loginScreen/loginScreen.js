@@ -41,7 +41,7 @@ class loginScreen extends Component {
         message: 'Please fill in all fields!',
       });
     } else {
-      this.props.push.history('/main');
+      this.props.history.push('/main');
     }
   }
 
