@@ -29,7 +29,7 @@ export default class discoverScreen extends Component {
         </h1>
       </div>
       {/* Google Maps */}
-      <div style={{ marginTop: '84%', height: '60vh', width: '100%', overflow: 'scroll' }}>
+      <div style={{ marginTop: '95%', height: '60vh', width: '100%', overflow: 'scroll' }}>
         <Link to="/list"><GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDxDh_GKLLuYF78nkTnS6jgzow84mNBEJU', language: 'en' }}
           defaultCenter={this.props.center}
