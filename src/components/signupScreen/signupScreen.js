@@ -77,7 +77,6 @@ class signupScreen extends Component {
       <div style={styles.container}>
         {this.renderAlert()}
         <form onSubmit={this.registerUser}>
-          <h1>Register for an Account</h1>
           <div>
             <label htmlFor="first_name">
               First Name:
@@ -114,7 +113,7 @@ class signupScreen extends Component {
           </label>
           <div>
             <label htmlFor="email">
-              Email:
+              Email URL:
               <input
                 style={styles.input}
                 type="text"
@@ -158,7 +157,8 @@ const styles = {
   },
   input: {
     padding: '5px',
-    margin: 10,
+    marginLeft: 20,
+    width: '50%'
   },
   register: {
     fontSize: '22px',
