@@ -9,7 +9,16 @@ export default class myEventsScreen extends Component {
     //     this.state = {};
     // }
     render() {
-      return <div className="component-my-events-screen">Hello! component myEventsScreen</div>;
+      return <div className="component-my-events-screen">
+            <div className="red" style={{"padding":"1%"}}>
+        <h1 className="center">
+          <div style={{"display":"flex", "justifyContent":"center"}}>
+            <img src={require("./MyEvents-Icon.png")} />
+            <span>My Events</span>
+            </div>
+        </h1>
+      </div>
+    </div>;
     }
   }
 // export default connect(
