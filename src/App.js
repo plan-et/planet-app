@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from "react-router-dom";
+// import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 // material imports
@@ -36,36 +37,22 @@ import Prompt14_Large from './components/createEventScreen/Prompts/Prompt14.js';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Route exact path="/" component={LandingScreen} />
-          <Route path="/main" component={MainScreen} />
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/createEvent" component={CreateEventScreen} />
-          <Route path="/discover" component={DiscoverScreen} />
-          <Route path="/largeEvent" component={LargeEventScreen} />
-          <Route path="/myEvents" component={MyEventsScreen} />
-          <Route path="/overview" component={OverviewScreen} />
-          <Route path="/signup" component={SignupScreen} />
-          <Route path="/smallEvent" component={SmallEventScreen} />
-
-          <Route path = "/1" component = {Prompt1}/>
-          <Route path = "/2" component = {Prompt2_Large}/>
-          <Route path = "/3" component = {Prompt3_Large}/>
-          <Route path = "/4" component = {Prompt4_Large}/>
-          <Route path = "/5" component = {Prompt5_Large}/>
-          <Route path = "/6" component = {Prompt6_Large}/>
-          <Route path = "/7" component = {Prompt7_Large}/>
-          <Route path = "/8" component = {Prompt8_Large}/>
-          <Route path = "/9" component = {Prompt9_Large}/>
-          <Route path = "/10" component = {Prompt10_Large}/>
-          <Route path = "/11" component = {Prompt11_Large}/>
-          <Route path = "/12" component = {Prompt12_Large}/>
-          <Route path = "/13" component = {Prompt13_Large}/>
-          <Route path = "/14" component = {Prompt14_Large}/>
-
-        </div>
-      </Router>
+      <BrowserRouter>
+        <Switch>
+          <div className="App">
+            <Route exact path="/" component={LandingScreen} />
+            <Route path="/main" component={MainScreen} />
+            <Route path="/login" component={LoginScreen} />
+            <Route path="/createEvent" component={CreateEventScreen} />
+            <Route path="/discover" component={DiscoverScreen} />
+            <Route path="/largeEvent" component={LargeEventScreen} />
+            <Route path="/myEvents" component={MyEventsScreen} />
+            <Route path="/overview" component={OverviewScreen} />
+            <Route path="/signup" component={SignupScreen} />
+            <Route path="/smallEvent" component={SmallEventScreen} />
+          </div>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
