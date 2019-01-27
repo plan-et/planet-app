@@ -10,6 +10,9 @@
 // custom scss
 body, html {
   background-image: url("Main-Screen-Background-02.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
   color: white;
   font-family: 'Cairo', sans-serif;
 }
