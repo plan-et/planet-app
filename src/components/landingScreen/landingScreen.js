@@ -13,7 +13,7 @@ export default class landingScreen extends Component {
   render() {
     return <div className="component-landing-screen">
       <Link to="/login"><Button style={{"backgroundColor": "#00CCB8", "fontWeight":"bolder", "marginTop": "125%", "width":"50vw"}} className="button" color="primary" variant="contained"><p>Login</p></Button></Link><br/>
-      <Link to="/sign-up"><Button style={{"backgroundColor": "#FF6B12", "fontWeight":"bolder", "marginTop":"5px", "width":"50vw"}} className="button" color="secondary" variant="contained"><p>Sign up</p></Button></Link>
+      <Link to="/signup"><Button style={{"backgroundColor": "#FF6B12", "fontWeight":"bolder", "marginTop":"5px", "width":"50vw"}} className="button" color="secondary" variant="contained"><p>Sign up</p></Button></Link>
     </div>;
 
   }
