@@ -34,12 +34,18 @@ export class Prompt4_Large extends Component {
             name="Status"
             value={this.state.value}
             onChange={this.handleRadioButton}>>
-            <FormControlLabel value="Have" control={<Radio />} label="Have" />
-            <FormControlLabel value="Need" control={<Radio />} label="Need" />
-            <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />
+            <FormControlLabel value="Have" control={<Radio />} label={<h4 style={styles.formControlLabel}>Have</h4>} />
+    <FormControlLabel value="Need" control={<Radio />} label={<h4 style={styles.formControlLabel}>Need</h4>} />
+                    <FormControlLabel value="Not Applicable" control={<Radio />} label={<h4 style={styles.formControlLabel}>Not Applicable</h4>} />
           </RadioGroup>
         </FormControl>
         </div>;
+    }
+}
+const styles = {
+    formControlLabel: {
+        fontSize: '20px',
+        color: '#ffffff',
     }
 }
 export default Prompt4_Large;

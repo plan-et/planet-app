@@ -13,19 +13,19 @@ import { Link } from 'react-router-dom';
 // import * as createEventScreenActions from "../../store/createEventScreen/actions";
 export class Prompt1 extends Component {
     constructor(props) {
-       super(props);
-         this.state = {
-             event_size: null,
-             private:false,
-         };
+        super(props);
+        this.state = {
+            event_size: null,
+            private: false,
+        };
     }
     handleRadioButton = (event) => {
         this.setState({
-          [event.target.name]: event.target.value
+            [event.target.name]: event.target.value
         });
     };
 
-    handleNextButtonClick= () => {
+    handleNextButtonClick = () => {
         console.log('Next button has been clicked');
         //const action = {type: 'ADD_INPUT_4', payload: this.state.input4};
         //console.log(action.type, action.payload);
@@ -39,23 +39,31 @@ export class Prompt1 extends Component {
             <ToggleButtonGroup value={size} exclusive>
                 <ToggleButton value="small" variant="contained" style={{ "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "5vh", "fontSize": "18px" }} >
                     Small Event
-        </ToggleButton>
+                </ToggleButton>
                 <p style={{ "marginTop": "0px" }}>1-30 guests</p>
                 <ToggleButton value="large" variant="contained" style={{ "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "1vh", "fontSize": "18px" }}>
                     Large
-        </ToggleButton>
+                </ToggleButton>
                 <p style={{ "marginTop": "0px" }}>30+ guests</p>
             </ToggleButtonGroup>
             <FormControlLabel
                 control={
                     <Switch />
                 }
-                label="Private"
+                label={<h4 style={styles.formControlLabel}>Private</h4>}
+                color="primary"
             />
         </div>;
     }
 }
-const mapReduxStateToProps = (reduxState)=>({
+
+const styles = {
+    formControlLabel: {
+        fontSize: '20px',
+        color: '#ffffff',
+    }
+}
+const mapReduxStateToProps = (reduxState) => ({
     reduxState
 });
-export default connect(mapReduxStateToProps) (Prompt1);
+export default connect(mapReduxStateToProps)(Prompt1);
