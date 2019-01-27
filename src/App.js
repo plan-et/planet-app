@@ -7,6 +7,7 @@ import './App.scss';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 // component imports
+import AccountScreen from './components/accountScreen/accountScreen';
 import LoginScreen from './components/loginScreen/loginScreen';
 import MainScreen from './components/mainScreen/mainScreen';
 import LandingScreen from './components/landingScreen/landingScreen';
@@ -41,6 +42,7 @@ class App extends Component {
         <Switch>
           <div className="App">
             <Route exact path="/" component={LandingScreen} />
+            <Route exact path="/account" component={AccountScreen} />
             <Route path="/main" component={MainScreen} />
             <Route path="/login" component={LoginScreen} />
             <Route path="/createEvent" component={CreateEventScreen} />
