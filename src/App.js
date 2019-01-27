@@ -14,6 +14,7 @@ import LandingScreen from './components/landingScreen/landingScreen';
 import CreateEventScreen from './components/createEventScreen/createEventScreen';
 import DiscoverScreen from './components/discoverScreen/discoverScreen';
 import LargeEventScreen from './components/largeEventScreen/largeEventScreen';
+import ListView from './components/listView/listView';
 import MyEventsScreen from './components/myEventsScreen/myEventsScreen';
 import OverviewScreen from './components/overviewScreen/overviewScreen';
 import SignupScreen from './components/signupScreen/signupScreen';
@@ -52,6 +53,7 @@ class App extends Component {
             <Route path="/overview" component={OverviewScreen} />
             <Route path="/signup" component={SignupScreen} />
             <Route path="/smallEvent" component={SmallEventScreen} />
+            <Route path="/list" component={ListView} />
           </div>
         </Switch>
       </BrowserRouter>

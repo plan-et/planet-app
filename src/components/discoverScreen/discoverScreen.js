@@ -30,7 +30,7 @@ export default class discoverScreen extends Component {
       </div>
       {/* Google Maps */}
       <div style={{ marginTop: '78%', height: '60vh', width: '100%', overflow: 'scroll' }}>
-        <Link to="/overview"><GoogleMapReact
+        <Link to="/list"><GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDxDh_GKLLuYF78nkTnS6jgzow84mNBEJU', language: 'en' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
