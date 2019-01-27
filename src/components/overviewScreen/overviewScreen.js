@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import HomeIcon from '@material-ui/icons/Home';
+import AccountIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './overviewScreen.scss'
 import { userInfo } from 'os';
@@ -71,7 +74,9 @@ class overviewScreen extends Component {
     }
     return (
       <div>
-        <div className="blue" style={{ "padding": "1%", "position": "absolute" }}>
+        <Link to="/main"><span style={{float: 'left', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><HomeIcon /></span></Link>
+      <span style={{float: 'right', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><AccountIcon /></span>
+        <div className="blue" style={{ "padding": "1%", "display":"flex-box" }}>
           <h1 className="center">
             <div style={{ "display": "flex", "justifyContent": "center" }}>
               <span>Hack the Gap</span>
