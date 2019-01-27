@@ -9,7 +9,11 @@ export default class createEventScreen extends Component {
     //     this.state = {};
     // }
     render() {
-      return <div className="component-create-event-screen">Hello! component createEventScreen</div>;
+      return <div className="component-create-event-screen">
+      <div className="orange">
+      <h1 class="text-center">Create Event</h1>
+      </div>
+      </div>;
     }
   }
 // export default connect(

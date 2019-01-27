@@ -1,75 +1,107 @@
 import React, { Component } from 'react';
 import './loginScreen.scss'
 import { connect } from "react-redux";
-import { loginUser, loginSuccess, loginFail } from '../../redux/actions';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class loginScreen extends Component {
-
-  onUsernameChange = (text) => {
-    this.props.usernameChanged(text);
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+      message: '',
+    };
   }
 
-  onPasswordChange = (text) => {
-    this.props.passwordChanged(text);
+  handleInputChangeFor = propertyName => (event) => {
+    this.setState({
+      [propertyName]: event.target.value,
+    });
   }
 
-  onButtonPress = () => {
-    const { username, password } = this.props;
-    if (this.props.username === '' || this.props.password === '') {
-      this.props.loginFail();
-    } else {
-      this.props.loginUser();
-    }
-  }
-
-  renderError = () => {
-    if (!this.props.error === "") {
+  renderAlert() {
+    if (this.state.message !== '') {
       return (
-        <h3>{this.props.error}</h3>
-      )
+        <h2
+          className="alert"
+          role="alert"
+        >
+          {this.state.message}
+        </h2>
+      );
+    }
+    return (<span />);
+  }
+
+  loginUser = (event) => {
+    event.preventDefault();
+    if (this.state.username === '' || this.state.password === '') {
+      this.setState({
+        message: 'Please fill in all fields!',
+      });
+    } else {
+      this.props.push.history('/main');
     }
   }
 
   render() {
     return (
-      <div>
-        {this.renderError()}
-        <h1>Login to Plan(et)</h1>
-        <form onSubmit={this.onButtonPress}>
+      <div style={styles.container}>
+        {this.renderAlert()}
+        <form onSubmit={this.loginUser}>
+          <h1>Login to Plan(et)</h1>
           <div>
-            <h2>Username</h2>
-            <input
-              type="text"
-              name="username"
-              value={this.props.username}
-              onChange={this.onUsernameChange}
-            />
+            <label htmlFor="username">
+              Username:
+              <input
+                style={styles.input}
+                type="text"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleInputChangeFor('username')}
+              />
+            </label>
           </div>
           <div>
-            <h2>Password</h2>
-            <input
-              type="password"
-              name="password"
-              value={this.props.password}
-              onChange={this.onPasswordChange}
-            />
+            <label htmlFor="password">
+              Password:
+              <input
+                style={styles.input}
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleInputChangeFor('password')}
+              />
+            </label>
           </div>
           <div>
             <input
+              style={styles.txt}
               type="submit"
               name="submit"
               value="Log In"
             />
           </div>
+          <Link to="/" style={styles.txt}>Cancel</Link>
         </form>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({ Auth }) => {
-  const { user, password, error, loading } = Auth;
-  return { user, password, error, loading };
+const styles = {
+  container: {
+    marginTop: '222px',
+  },
+  input: {
+    padding: '5px',
+    margin: 10,
+  },
+  txt: {
+    fontSize: '22px',
+    color: '#ffffff'
+  }
 }
 
-export default connect(mapStateToProps, { loginUser, loginSuccess, loginFail })(loginScreen);
+export default connect()(loginScreen);
