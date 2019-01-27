@@ -9,7 +9,16 @@ export default class discoverScreen extends Component {
     //     this.state = {};
     // }
     render() {
-      return <div className="component-discover-screen">Hello! component discoverScreen</div>;
+      return <div className="component-discover-screen">
+        <div className="yellow" style={{"padding":"1%"}}>
+        <h1 className="center">
+          <div style={{"display":"flex", "justifyContent":"center"}}>
+            <img src={require("./Discover-Icon.png")} />
+            <span>Discover Events</span>
+            </div>
+        </h1>
+      </div>
+    </div>;
     }
   }
 // export default connect(
