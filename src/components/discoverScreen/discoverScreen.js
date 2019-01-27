@@ -17,6 +17,21 @@ export default class discoverScreen extends Component {
             <span>Discover Events</span>
             </div>
         </h1>
+<<<<<<< Updated upstream
+=======
+      </div><br/>
+      {/* Google Maps */}
+      <div style={{ marginTop: '90%', height: '60vh', width: '100%', overflow: 'scroll' }}>
+        <Link to="/list"><GoogleMapReact
+          bootstrapURLKeys={{ key: 'AIzaSyDxDh_GKLLuYF78nkTnS6jgzow84mNBEJU', language: 'en' }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+          onChildMouseEnter={this.onChildMouseEnter}
+          onChildMouseLeave={this.onChildMouseLeave}
+        >
+        </GoogleMapReact>
+        </Link>
+>>>>>>> Stashed changes
       </div>
     </div>;
     }
