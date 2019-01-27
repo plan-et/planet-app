@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './createEventScreen.scss'
+import HomeIcon from '@material-ui/icons/Home';
+import AccountIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
 import Prompt1 from './Prompts/Prompt1.js';
 import Prompt2_Large from './Prompts/Prompt2.js';
 import Prompt3_Large from './Prompts/Prompt3.js';
@@ -18,6 +21,8 @@ export default class createEventScreen extends Component {
   // }
   render() {
     return <div className="component-create-event-screen">
+      <Link to="/main"><span style={{float: 'left', marginTop: '-80%', padding: '3%', color: '#ced2d5'}}><HomeIcon /></span></Link>
+      <span style={{float: 'right', marginTop: '-80%', padding: '3%', color: '#ced2d5'}}><AccountIcon /></span>
       <div className="orange" style={{"padding":"1%", "display":"flex-box"}}>
         <h1 className="center">
           <div style={{"display":"flex", "justifyContent":"center"}}>

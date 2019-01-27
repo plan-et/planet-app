@@ -8,7 +8,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
+import HomeIcon from '@material-ui/icons/Home';
+import AccountIcon from '@material-ui/icons/AccountCircle';
+import { Link } from 'react-router-dom';
 class myEventsScreen extends Component {
   constructor(props) {
     super(props);
@@ -29,6 +31,8 @@ class myEventsScreen extends Component {
   render() {
     return (
       <div className="component-my-events-screen">
+       <Link to="/main"><span style={{float: 'left', marginTop: '-85%', padding: '3%', color: '#ced2d5'}}><HomeIcon /></span></Link>
+      <span style={{float: 'right', marginTop: '-85%', padding: '3%', color: '#ced2d5'}}><AccountIcon /></span>
         <div className="red" style={{ "padding": "1%" }}>
           <h1 className="center">
             <div style={{ "display": "flex", "justifyContent": "center" }}>
