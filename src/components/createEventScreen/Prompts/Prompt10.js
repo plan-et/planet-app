@@ -29,7 +29,9 @@ export class Prompt10_Large extends Component {
           <FormLabel component="legend">Dietary Restrictions</FormLabel>
           <RadioGroup
             aria-label="Item Status Selector"
-            name="Status">
+            name="Status"
+            value={this.state.value}
+            onChange={this.handleRadioButton}>>
             <FormControlLabel value="Have" control={<Radio />} label="Yes" />
             <FormControlLabel value="Need" control={<Radio />} label="No" />
             <FormControlLabel value="Not Applicable" control={<Radio />} label="Unsure" />

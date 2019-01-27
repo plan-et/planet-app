@@ -29,7 +29,9 @@ export class Prompt12_Large extends Component {
           <FormLabel component="legend">Equipment</FormLabel>
           <RadioGroup
             aria-label="Item Status Selector"
-            name="Status">
+            name="Status"
+            value={this.state.value}
+            onChange={this.handleRadioButton}>>
             <FormControlLabel value="Have" control={<Radio />} label="Have" />
             <FormControlLabel value="Need" control={<Radio />} label="Need" />
             <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />

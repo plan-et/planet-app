@@ -22,7 +22,7 @@ export class Prompt4_Large extends Component {
           [event.target.name]: event.target.value
         });
     };
-    
+
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>We know there are a lot of moving parts to keep track of while planning an event, so we're going to take you through a quick guide.</h3>
@@ -31,7 +31,9 @@ export class Prompt4_Large extends Component {
           <FormLabel component="legend">Status</FormLabel>
           <RadioGroup
             aria-label="Item Status Selector"
-            name="Status">
+            name="Status"
+            value={this.state.value}
+            onChange={this.handleRadioButton}>>
             <FormControlLabel value="Have" control={<Radio />} label="Have" />
             <FormControlLabel value="Need" control={<Radio />} label="Need" />
             <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />

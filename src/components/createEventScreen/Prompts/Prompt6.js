@@ -22,7 +22,7 @@ export class Prompt6_Large extends Component {
         [event.target.name]: event.target.value
       });
     };
-    
+
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Some types of locations or events require a permit for groups over a certain size.</h3>
@@ -31,7 +31,9 @@ export class Prompt6_Large extends Component {
           <FormLabel component="legend">Permit</FormLabel>
           <RadioGroup
             aria-label="Item Status Selector"
-            name="Status">
+            name="Status"
+            value={this.state.value}
+            onChange={this.handleRadioButton}>>
             <FormControlLabel value="Have" control={<Radio />} label="Have" />
             <FormControlLabel value="Need" control={<Radio />} label="Need" />
             <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />
