@@ -18,7 +18,7 @@ class overviewScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      host: true,
+      host: false,
     };
   }
 
