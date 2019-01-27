@@ -7,6 +7,7 @@ import './overviewScreen.scss'
 import { userInfo } from 'os';
 import swal from 'sweetalert';
 
+
 class overviewScreen extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +39,7 @@ class overviewScreen extends Component {
     console.log('in deleteEvent');
     swal({
       title: "Are you sure you want to cancel this event?",
-      text: "A SMS text message will be sent to all of your guest to be notified of the cancellation.",
+      // text: "A SMS text message will be sent to all of your guest to be notified of the cancellation.",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -74,21 +75,21 @@ class overviewScreen extends Component {
     }
     return (
       <div>
-        <Link to="/main"><span style={{float: 'left', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><HomeIcon /></span></Link>
-      <span style={{float: 'right', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><AccountIcon /></span>
-        <div className="blue" style={{ "padding": "1%", "display":"flex-box" }}>
+        <Link to="/main"><span style={{ float: 'left', marginTop: '-75%', padding: '3%', color: '#ced2d5' }}><HomeIcon /></span></Link>
+        <span style={{ float: 'right', marginTop: '-75%', padding: '3%', color: '#ced2d5' }}><AccountIcon /></span>
+        <div className="blue" style={{ "padding": "1%", "display": "flex-box" }}>
           <h1 className="center">
             <div style={{ "display": "flex", "justifyContent": "center" }}>
-              <span>Hack the Gap</span>
+              <span>Women in Tech</span>
             </div>
           </h1>
         </div>
         <div style={styles.container}>
           <span style={styles.header}>Date: </span>
-          <span>Jan 27th, 2019</span>
+          <span>April 15th, 2019</span>
           <br />
           <span style={styles.header}>Time: </span>
-          <span>1:00pm</span>
+          <span>3:00pm</span>
           <br />
           <span style={styles.header}>Location: </span>
           <span>Glen Nelson Center</span>
@@ -96,7 +97,7 @@ class overviewScreen extends Component {
           <span>370 Wabasha St N #500, St Paul, MN 55102</span>
           <br />
           <span style={styles.header}>Host(s): </span>
-          <span>Mai Chee Vang</span>
+          <span>Kara Burnett</span>
           <br />
           <span style={styles.header}>Event Description: </span>
           <br />
@@ -104,20 +105,17 @@ class overviewScreen extends Component {
           <span style={styles.header}>Meeting</span>
           <br />
           <span>
-            Hack the Gap is cool! More women in tech should join!
-            Hack the Gap is cool! More women in tech should join!
-            Hack the Gap is cool! More women in tech should join!
+            Women Power!
             </span>
           <img src={require("./Map-01.png")} style={{ width: '100%' }} />
         </div>
         <div style={styles.stickToBottom}>
           {buttons}
         </div>
-      </div>
+      </div >
     )
-  }
+  };
 }
-
 const styles = {
   container: {
     marginTop: '270px',
