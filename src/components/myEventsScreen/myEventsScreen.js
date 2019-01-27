@@ -52,7 +52,7 @@ class myEventsScreen extends Component {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Women in Tech Rally
+                  Women in Tech
                 </Typography>
               </CardContent>
             </CardActionArea>
