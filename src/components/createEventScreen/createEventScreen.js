@@ -5,6 +5,14 @@ import Prompt2_Large from './Prompts/Prompt2.js';
 import Prompt3_Large from './Prompts/Prompt3.js';
 import Prompt4_Large from './Prompts/Prompt4.js';
 import Prompt5_Large from './Prompts/Prompt5.js';
+import Prompt6_Large from './Prompts/Prompt6.js';
+import Prompt7_Large from './Prompts/Prompt7.js';
+import Prompt8_Large from './Prompts/Prompt8.js';
+import Prompt9_Large from './Prompts/Prompt9.js';
+import Prompt10_Large from './Prompts/Prompt10.js';
+import Prompt11_Large from './Prompts/Prompt11.js';
+import Prompt12_Large from './Prompts/Prompt12.js';
+import Prompt13_Large from './Prompts/Prompt13.js';
 import Prompt14_Large from './Prompts/Prompt14.js';
 
 
@@ -29,11 +37,11 @@ export default class createEventScreen extends Component {
       {/* Div below is where all the different planning prompts will render */}
       <div style={{ "marginTop":"45vh", "backgroundColor": "none", "height":"55vh", "overflow":"scroll"}} className="center">
         {/* <Prompt1/> */}
-        {/* <Prompt2_Large/> */}
+        {/* <Prompt2_Large/>  */}
         {/* <Prompt3_Large/> */}
         {/* <Prompt4_Large/> */}
-        {/* <Prompt5_Large/> */}
-        <Prompt14_Large/>
+        <Prompt5_Large/>
+        {/* <Prompt14_Large/> */}
       
       </div>
     

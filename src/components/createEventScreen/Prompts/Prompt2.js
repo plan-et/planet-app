@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import Switch from '@material-ui/core/Switch';
 
 
 // import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
 // import * as createEventScreenActions from "../../store/createEventScreen/actions";
 export class Prompt2_Large extends Component {
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {};
-  // }
+  constructor(props) {
+      super(props);
+      this.state = {
+        event_type:'',
+      };
+  }
+  handleRadioButton = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   render() {
     return <div className="component-prompt">
       <h2 >Event Type</h2>

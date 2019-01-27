@@ -8,13 +8,17 @@ import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
 // import { bindActionCreators } from "redux";
 // import * as createEventScreenActions from "../../store/createEventScreen/actions";
 export class Prompt14_Large extends Component {
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {};
-  // }
-
+  constructor(props) {
+     super(props);
+      this.state = {
+        additional_needs: [],
+      };
+  }
+  handleRadioButton = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   render() {
-    let size;
     return <div className="component-prompt" style={{ "paddingBottom": "5vh" }}>
       <h3 style={{ "margin": "2vw" }}>Are there any miscellaneous items you need for your event?</h3>
       <h3 style={{ "margin": "2vw" }}>Write them below to add them to the list.</h3>

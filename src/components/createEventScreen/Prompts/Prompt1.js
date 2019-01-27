@@ -10,10 +10,17 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 // import { bindActionCreators } from "redux";
 // import * as createEventScreenActions from "../../store/createEventScreen/actions";
 export class Prompt1 extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {};
-    // }
+    constructor(props) {
+       super(props);
+         this.state = {
+             event_size: null,
+             private:false,
+         };
+    }
+    handleRadioButton = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value
+        });
     render() {
         let size;
         return <div className="component-prompt">
