@@ -6,7 +6,13 @@ import axios from 'axios';
 import './overviewScreen.scss'
 import { userInfo } from 'os';
 import swal from 'sweetalert';
-
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 class overviewScreen extends Component {
   constructor(props) {
@@ -108,6 +114,106 @@ class overviewScreen extends Component {
             Women Power!
             </span>
           <img src={require("./Map-01.png")} style={{ width: '100%' }} />
+          <div style={{ "display": "flex-box", "height": "auto", "width": "auto" }}>
+            <h2>Guest List: </h2>
+            <div style={{ "display": "flex-box", "height": "auto", "width": "auto", "justify-content":"center", "alignContent":"center" }}>
+              <Card style={styles.card}>
+                <CardActionArea>
+                  <CardMedia
+                    style={styles.media}
+                    // image={require("./snowboard.JPG")}
+                    title="snowboard"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h3">
+                      Kyra Crawford
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    See Profile
+                  </Button>
+                </CardActions>
+              </Card>
+              <Card style={styles.card}>
+                <CardActionArea>
+                  <CardMedia
+                    style={styles.media}
+                    // image={require("./snowboard.JPG")}
+                    title="snowboard"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h3">
+                      Kylee Hawkinson
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    See Profile
+                  </Button>
+                </CardActions>
+              </Card>
+              <Card style={styles.card}>
+                <CardActionArea>
+                  <CardMedia
+                    style={styles.media}
+                    // image={require("./snowboard.JPG")}
+                    title="snowboard"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h3">
+                      Stephanie Ratanas
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    See Profile
+                  </Button>
+                </CardActions>
+              </Card>
+              <Card style={styles.card}>
+                <CardActionArea>
+                  <CardMedia
+                    style={styles.media}
+                    // image={require("./snowboard.JPG")}
+                    title="snowboard"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h3">
+                      Ellen Dupler
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    See Profile
+                  </Button>
+                </CardActions>
+              </Card>
+              <Card style={styles.card}>
+                <CardActionArea>
+                  <CardMedia
+                    style={styles.media}
+                    // image={require("./snowboard.JPG")}
+                    title="snowboard"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h3">
+                      Mai Chee Vang
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    See Profile
+                  </Button>
+                </CardActions>
+              </Card>
+            </div>
+          </div>
         </div>
         <div style={styles.stickToBottom}>
           {buttons}
@@ -122,7 +228,12 @@ const styles = {
     backgroundColor: '#ffffff',
     color: '#000000',
     overflow: 'scroll',
-    height: '53vh'
+    height: '50vh',
+  },
+  card: {
+    maxWidth: 145,
+    marginLeft: '15px',
+    marginBottom: '15px',
   },
   button: {
     backgroundColor: "#00CCB8",
