@@ -12,6 +12,7 @@ class signupScreen extends Component {
       last_name: '',
       username: '',
       email: '',
+      telephone: '',
       password: '',
       message: '',
     };
@@ -20,7 +21,7 @@ class signupScreen extends Component {
   registerUser = (event) => {
     event.preventDefault();
     if (this.state.username === '' || this.state.password === '' || this.state.email === ''
-      || this.state.first_name === '' || this.state.last_name === '') {
+      || this.state.first_name === '' || this.state.last_name === '' || this.state.telephone === '') {
       this.setState({
         message: 'Please fill in all fields!',
       });
@@ -30,6 +31,7 @@ class signupScreen extends Component {
         last_name: this.state.last_name,
         username: this.state.username,
         email: this.state.email,
+        telephone: this.state.telephone,
         password: this.state.password,
       };
 
@@ -113,13 +115,25 @@ class signupScreen extends Component {
           </label>
           <div>
             <label htmlFor="email">
-              Email URL:
+              Email:
               <input
                 style={styles.input}
                 type="text"
                 name="email"
                 value={this.state.email}
                 onChange={this.handleInputChangeFor('email')}
+              />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="telephone">
+              Telephone
+              <input
+                style={styles.input}
+                type="tel"
+                name="phone"
+                value={this.state.telephone}
+                onChange={this.handleInputChangeFor('telephone')}
               />
             </label>
           </div>
