@@ -50,7 +50,6 @@ class loginScreen extends Component {
       <div style={styles.container}>
         {this.renderAlert()}
         <form onSubmit={this.loginUser}>
-          <h1>Login to Plan(et)</h1>
           <div>
             <label htmlFor="username">
               Username:
