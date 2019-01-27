@@ -4,6 +4,8 @@ import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 // import { connect } from "react-redux";
@@ -22,7 +24,15 @@ export class Prompt1 extends Component {
           [event.target.name]: event.target.value
         });
     };
-    
+
+    handleNextButtonClick= () => {
+        console.log('Next button has been clicked');
+        //const action = {type: 'ADD_INPUT_4', payload: this.state.input4};
+        //console.log(action.type, action.payload);
+        //this.props.dispatch(action);
+        //this.props.history.push('/2');
+    }
+
     render() {
         let size;
         return <div className="component-prompt">
@@ -45,4 +55,7 @@ export class Prompt1 extends Component {
         </div>;
     }
 }
-export default Prompt1;
+const mapReduxStateToProps = (reduxState)=>({
+    reduxState
+});
+export default connect(mapReduxStateToProps) (Prompt1);

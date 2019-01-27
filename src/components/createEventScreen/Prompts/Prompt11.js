@@ -26,6 +26,7 @@ export class Prompt11_Large extends Component {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>In case of emergency, having a safety plan is important, if not mandatory.</h3>
           <h3 style={{"margin": "2vw"}}>Do you have plans for emergency situations?</h3>
+          <h3 style={{ "margin": "2vw" }}>{JSON.stringify(this.state.emergency_plan)}</h3>
           <FormControl component="fieldset">
           <FormLabel component="legend">Emergency</FormLabel>
           <RadioGroup
@@ -38,9 +39,6 @@ export class Prompt11_Large extends Component {
             <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />
           </RadioGroup>
         </FormControl>
-        <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "5vh", "fontSize": "18px" }}>
-          Next
-        </Button>
         </div>;
     }
 }

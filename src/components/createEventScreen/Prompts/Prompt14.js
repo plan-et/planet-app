@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import AddCircleOutline from '@material-ui/icons/AddCircleOutline';
+import { Link } from 'react-router-dom';
 
 
 // import { connect } from "react-redux";
@@ -32,9 +33,9 @@ export class Prompt14_Large extends Component {
         style={{ "width": "75vw", "backgroundColor": "white" }}
       />
       <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "fontSize": "20px", "marginTop": "4.5%", "height": "8vh" }}><AddCircleOutline /></Button>
-      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "5vh", "fontSize": "18px" }}>
-        Next
-      </Button>
+      <Link to="/overview" style={{"textDecoration" : "none", "color" : "white"}}><Button variant="contained" style={{ "color": "white", "backgroundColor": "#FF6B12", "width": "50vw", "marginTop": "2vh","marginBottom": "2vh", "fontSize": "18px" }} >
+          Complete Event
+      </Button></Link>
     </div>;
   }
 }

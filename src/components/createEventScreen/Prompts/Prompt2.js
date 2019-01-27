@@ -17,23 +17,23 @@ export class Prompt2_Large extends Component {
       [event.target.name]: event.target.value
     });
   };
-  
+
   render() {
     return <div className="component-prompt">
       <h2 >Event Type</h2>
-      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "0vh", "fontSize": "18px" }} >
-        Town Hall
+      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "0vh", "fontSize": "18px" }} value="7" >
+        Meeting
         </Button>
       <br />
-      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }}>
-        Protest
+      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }} value="3">
+        Rally
         </Button>
       <br />
       <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }}>
         Celebration
         </Button>
       <br />
-      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }}>
+      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }} >
         Other
         </Button>
 

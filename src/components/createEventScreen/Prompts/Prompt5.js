@@ -40,9 +40,6 @@ export class Prompt5_Large extends Component {
           <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />
         </RadioGroup>
       </FormControl>
-      <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "5vh", "fontSize": "18px" }}>
-        Next
-        </Button>
     </div>;
   }
 }

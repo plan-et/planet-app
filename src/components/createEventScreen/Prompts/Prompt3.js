@@ -19,7 +19,7 @@ export class Prompt3_Large extends Component {
       [event.target.name]: event.target.value
     });
   };
-  
+
   render() {
     return <div className="component-prompt">
       <form noValidate autoComplete="off">
@@ -40,9 +40,6 @@ export class Prompt3_Large extends Component {
           variant="filled"
           style={{ "width": "85vw", "backgroundColor": "white" }}
         />
-        <Button variant="contained" style={{ "color": "white", "backgroundColor": "#00CCB8", "width": "65vw", "marginTop": "2vh", "fontSize": "18px" }}>
-          Next
-        </Button>
         </form>
         
 
