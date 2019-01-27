@@ -10,7 +10,7 @@ class signupScreen extends Component {
     this.state = {
       first_name: '',
       last_name: '',
-      telephone: '',
+      username: '',
       email: '',
       password: '',
       message: '',
@@ -28,7 +28,7 @@ class signupScreen extends Component {
       const body = {
         first_name: this.state.first_name,
         last_name: this.state.last_name,
-        telephone: this.state.telephone,
+        username: this.state.username,
         email: this.state.email,
         password: this.state.password,
       };
@@ -102,6 +102,16 @@ class signupScreen extends Component {
               />
             </label>
           </div>
+          <label htmlFor="username">
+            Username:
+              <input
+              style={styles.input}
+              type="text"
+              name="first_name"
+              value={this.state.username}
+              onChange={this.handleInputChangeFor('username')}
+            />
+          </label>
           <div>
             <label htmlFor="email">
               Email:

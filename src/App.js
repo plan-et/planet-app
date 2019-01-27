@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from "react-router-dom";
+// import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 // material imports
@@ -20,20 +21,22 @@ import SmallEventScreen from './components/smallEventScreen/smallEventScreen';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <Route exact path="/" component={LandingScreen} />
-          <Route path="/main" component={MainScreen} />
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/createEvent" component={CreateEventScreen} />
-          <Route path="/discover" component={DiscoverScreen} />
-          <Route path="/largeEvent" component={LargeEventScreen} />
-          <Route path="/myEvents" component={MyEventsScreen} />
-          <Route path="/overview" component={OverviewScreen} />
-          <Route path="/signup" component={SignupScreen} />
-          <Route path="/smallEvent" component={SmallEventScreen} />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <Switch>
+          <div className="App">
+            <Route exact path="/" component={LandingScreen} />
+            <Route path="/main" component={MainScreen} />
+            <Route path="/login" component={LoginScreen} />
+            <Route path="/createEvent" component={CreateEventScreen} />
+            <Route path="/discover" component={DiscoverScreen} />
+            <Route path="/largeEvent" component={LargeEventScreen} />
+            <Route path="/myEvents" component={MyEventsScreen} />
+            <Route path="/overview" component={OverviewScreen} />
+            <Route path="/signup" component={SignupScreen} />
+            <Route path="/smallEvent" component={SmallEventScreen} />
+          </div>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
