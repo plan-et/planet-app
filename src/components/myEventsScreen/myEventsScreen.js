@@ -47,8 +47,48 @@ class myEventsScreen extends Component {
             <CardActionArea>
               <CardMedia
                 style={styles.media}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="Contemplative Reptile"
+                image={require("./winter.jpg")}
+                title="Winter Festival"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Winter Carnival
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary" onClick={() => this.props.history.push('/overview')}>
+                Learn More
+              </Button>
+              <Button>Jan 28th, 2019</Button>
+            </CardActions>
+          </Card>
+          <Card style={styles.card}>
+            <CardActionArea>
+              <CardMedia
+                style={styles.media}
+                image={require("./snowboard.JPG")}
+                title="snowboard"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Snowboard Fun
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary" onClick={() => this.props.history.push('/overview')}>
+                Learn More
+              </Button>
+              <Button>Feb 2th, 2019</Button>
+            </CardActions>
+          </Card>
+          <Card style={styles.card}>
+            <CardActionArea>
+              <CardMedia
+                style={styles.media}
+                image={require("./myEvents-image.png")}
+                title="Women in tech"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
@@ -60,6 +100,7 @@ class myEventsScreen extends Component {
               <Button size="small" color="primary" onClick={() => this.props.history.push('/overview')}>
                 Learn More
               </Button>
+              <Button>April 15th, 2019</Button>
             </CardActions>
           </Card>
         </div>
@@ -71,13 +112,16 @@ class myEventsScreen extends Component {
 const styles = {
   container: {
     marginTop: '312px',
-    display: 'flex',
+    display: 'block',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'scroll',
+    height: '53vh',
   },
   card: {
     maxWidth: 345,
-    
+    marginLeft: '15px',
+    marginBottom: '15px',
   },
   media: {
     height: 140,
