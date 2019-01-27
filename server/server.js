@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 
 // Route includes
     // example: const userRouter = require('./routes/user.router');
-const eventsRouter = require('./routes/events.router')
+const smallEventsRouter = require('./routes/smallevents.router')
+const largeEventsRouter = require('./routes/largeevents.router')
+
 
 
 
@@ -17,11 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Routes */
     // example: app.use('/api/user', userRouter);
-app.use('/api/events', eventsRouter);
+app.use('/api/events/small', smallEventsRouter);
+app.use('/api/events/large', largeEventsRouter);
 
-app.get('/api/hello', (req, res) => {
-    res.send({ express: 'Hello From Hello from Planet' });
-  });
 
 // Serve static files
 app.use(express.static('build'));

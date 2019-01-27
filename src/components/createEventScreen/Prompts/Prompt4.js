@@ -28,15 +28,24 @@ export class Prompt4_Large extends Component {
           <h3 style={{"margin": "2vw"}}>We know there are a lot of moving parts to keep track of while planning an event, so we're going to take you through a quick guide.</h3>
           <h3 style={{"margin": "2vw"}}>Do you have a venue or location?</h3>
           <FormControl component="fieldset">
+<<<<<<< HEAD
           {/* <FormLabel component="legend">Status</FormLabel> */}
+=======
+          <FormLabel component="legend">Status</FormLabel>
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
           <RadioGroup
             aria-label="Item Status Selector"
             name="Status"
             value={this.state.value}
             onChange={this.handleRadioButton}>>
             <FormControlLabel value="Have" control={<Radio />} label={<h4 style={styles.formControlLabel}>Have</h4>} />
+<<<<<<< HEAD
             <FormControlLabel value="Need" control={<Radio />} label={<h4 style={styles.formControlLabel}>Need</h4>} />
             <FormControlLabel value="Not Applicable" control={<Radio />} label={<h4 style={styles.formControlLabel}>Not Applicable</h4>} />
+=======
+    <FormControlLabel value="Need" control={<Radio />} label={<h4 style={styles.formControlLabel}>Need</h4>} />
+                    <FormControlLabel value="Not Applicable" control={<Radio />} label={<h4 style={styles.formControlLabel}>Not Applicable</h4>} />
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
           </RadioGroup>
         </FormControl>
         </div>;

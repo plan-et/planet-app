@@ -27,26 +27,41 @@ export class Prompt5_Large extends Component {
   render() {
     return <div className="component-prompt" style={{ "paddingBottom": "5vh" }}>
       <h3 style={{ "margin": "2vw" }}>Do you need any extra equipment or supplies, such as chairs, tables, heaters, etc?</h3>
+<<<<<<< HEAD
       {/* <h3 style={{ "margin": "2vw" }}>{JSON.stringify(this.state.equipment_status)}</h3> */}
       <FormControl component="fieldset">
         {/* <FormLabel component="legend">Equipment</FormLabel> */}
+=======
+      <h3 style={{ "margin": "2vw" }}>{JSON.stringify(this.state.equipment_status)}</h3>
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Equipment</FormLabel>
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
         <RadioGroup
           aria-label="Item Status Selector"
           name="equipment_status"
           value={this.state.value}
           onChange={this.handleRadioButton}>
+<<<<<<< HEAD
           <FormControlLabel value="Have" control={<Radio />} label={<h4 style={styles.formControlLabel}>Have</h4>} />
           <FormControlLabel value="Need" control={<Radio />} label={<h4 style={styles.formControlLabel}>Need</h4>} />
           <FormControlLabel value="Not Applicable" control={<Radio />} label={<h4 style={styles.formControlLabel}>Not Applicable</h4>} />
+=======
+          <FormControlLabel value="Have" control={<Radio/>} label="Have" />
+          <FormControlLabel value="Need" control={<Radio />} label="Need" />
+          <FormControlLabel value="Not Applicable" control={<Radio />} label="Not Applicable" />
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
         </RadioGroup>
       </FormControl>
     </div>;
   }
 }
+<<<<<<< HEAD
 const styles = {
   formControlLabel: {
       fontSize: '20px',
       color: '#ffffff',
   }
 }
+=======
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
 export default Prompt5_Large;

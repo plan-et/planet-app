@@ -26,24 +26,37 @@ export class Prompt10_Large extends Component {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Great! You're going to have food at your event. Will you need to plan for any dietary restriction?</h3>
           <FormControl component="fieldset">
+<<<<<<< HEAD
           {/* <FormLabel component="legend">Dietary Restrictions</FormLabel> */}
+=======
+          <FormLabel component="legend">Dietary Restrictions</FormLabel>
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
           <RadioGroup
             aria-label="Item Status Selector"
             name="Status"
             value={this.state.value}
             onChange={this.handleRadioButton}>>
+<<<<<<< HEAD
             <FormControlLabel value="Have" control={<Radio />} label={<h4 style={styles.formControlLabel}>Have</h4>} />
             <FormControlLabel value="Need" control={<Radio />} label={<h4 style={styles.formControlLabel}>Need</h4>} />
             <FormControlLabel value="Not Applicable" control={<Radio />} label={<h4 style={styles.formControlLabel}>Not Applicable</h4>} />
+=======
+            <FormControlLabel value="Have" control={<Radio />} label="Yes" />
+            <FormControlLabel value="Need" control={<Radio />} label="No" />
+            <FormControlLabel value="Not Applicable" control={<Radio />} label="Unsure" />
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
           </RadioGroup>
         </FormControl>
         </div>;
     }
 }
+<<<<<<< HEAD
 const styles = {
     formControlLabel: {
         fontSize: '20px',
         color: '#ffffff',
     }
 }
+=======
+>>>>>>> 1280c28f38314075cf90f972cc7c59695fc78284
 export default Prompt10_Large;

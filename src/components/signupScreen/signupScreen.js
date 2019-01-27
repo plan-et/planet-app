@@ -10,8 +10,9 @@ class signupScreen extends Component {
     this.state = {
       first_name: '',
       last_name: '',
-      telephone: '',
+      username: '',
       email: '',
+      telephone: '',
       password: '',
       message: '',
     };
@@ -20,7 +21,7 @@ class signupScreen extends Component {
   registerUser = (event) => {
     event.preventDefault();
     if (this.state.username === '' || this.state.password === '' || this.state.email === ''
-      || this.state.first_name === '' || this.state.last_name === '') {
+      || this.state.first_name === '' || this.state.last_name === '' || this.state.telephone === '') {
       this.setState({
         message: 'Please fill in all fields!',
       });
@@ -28,8 +29,9 @@ class signupScreen extends Component {
       const body = {
         first_name: this.state.first_name,
         last_name: this.state.last_name,
-        telephone: this.state.telephone,
+        username: this.state.username,
         email: this.state.email,
+        telephone: this.state.telephone,
         password: this.state.password,
       };
 
@@ -77,7 +79,6 @@ class signupScreen extends Component {
       <div style={styles.container}>
         {this.renderAlert()}
         <form onSubmit={this.registerUser}>
-          <h1>Register for an Account</h1>
           <div>
             <label htmlFor="first_name">
               First Name:
@@ -102,6 +103,16 @@ class signupScreen extends Component {
               />
             </label>
           </div>
+          <label htmlFor="username">
+            Username:
+              <input
+              style={styles.input}
+              type="text"
+              name="first_name"
+              value={this.state.username}
+              onChange={this.handleInputChangeFor('username')}
+            />
+          </label>
           <div>
             <label htmlFor="email">
               Email:
@@ -111,6 +122,18 @@ class signupScreen extends Component {
                 name="email"
                 value={this.state.email}
                 onChange={this.handleInputChangeFor('email')}
+              />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="telephone">
+              Telephone
+              <input
+                style={styles.input}
+                type="tel"
+                name="phone"
+                value={this.state.telephone}
+                onChange={this.handleInputChangeFor('telephone')}
               />
             </label>
           </div>
@@ -148,7 +171,8 @@ const styles = {
   },
   input: {
     padding: '5px',
-    margin: 10,
+    marginLeft: 20,
+    width: '50%'
   },
   register: {
     fontSize: '22px',
