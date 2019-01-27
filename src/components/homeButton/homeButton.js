@@ -15,7 +15,7 @@ class homeButton extends Component {
     render() {
       return <div className="component-home-button">
       <Link to="/main"><span style={{float: 'left', padding: '2%', color: '#ced2d5'}}><HomeIcon /></span></Link>
-      <span style={{float: 'right', padding: '2%', color: '#ced2d5'}}><AccountIcon /></span>
+      <Link to="/account"><span style={{float: 'right', padding: '2%', color: '#ced2d5'}}><AccountIcon /></span></Link>
       </div>;
     }
   }

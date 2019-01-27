@@ -74,9 +74,9 @@ class overviewScreen extends Component {
     }
     return (
       <div>
-        <Link to="/main"><span style={{float: 'left', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><HomeIcon /></span></Link>
-      <span style={{float: 'right', marginTop: '-75%', padding: '3%', color: '#ced2d5'}}><AccountIcon /></span>
-        <div className="blue" style={{ "padding": "1%", "display":"flex-box" }}>
+        <Link to="/main"><span style={{ float: 'left', marginTop: '-75%', padding: '3%', color: '#ced2d5' }}><HomeIcon /></span></Link>
+        <Link to="/account"><span style={{ float: 'right', marginTop: '-75%', padding: '3%', color: '#ced2d5' }}><AccountIcon /></span></Link>
+        <div className="blue" style={{ "padding": "1%", "display": "flex-box" }}>
           <h1 className="center">
             <div style={{ "display": "flex", "justifyContent": "center" }}>
               <span>Hack the Gap</span>
