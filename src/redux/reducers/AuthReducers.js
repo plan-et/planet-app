@@ -1,8 +1,15 @@
-import { LOGIN_USER, LOGIN_SUCCESS, LOGIN_FAIL } from '../actions/types';
+import { 
+    LOGIN_USER, 
+    LOGIN_SUCCESS, 
+    LOGIN_FAIL,
+    USERNAME_CHANGED,
+    PASSWORD_CHANGED 
+} from '../actions/types';
 
 const INITIAL_STATE = {
-    user: '',
+    username: '',
     password: '',
+    user: null,
     loading: false,
     error: '',
     signedIn: false,
@@ -10,6 +17,10 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
+        case USERNAME_CHANGED:
+            return { ...state, username: action.payload }
+        case PASSWORD_CHANGED:
+            return { ...state, password: action.payload }
         case LOGIN_USER:
             return { ...state, loading: true, error: '' };
         case LOGIN_SUCCESS:
