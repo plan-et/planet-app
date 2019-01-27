@@ -1,21 +1,18 @@
-import './discoverScreen.scss'
+import './discoverScreen.scss';
 import GoogleMapReact from 'google-map-react';
+import { Link } from 'react-router-dom';
+import Marker from 'google-map-react';
 import React, { Component } from 'react';
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
-// import * as discoverScreenActions from "../../store/discoverScreen/actions";
 export default class discoverScreen extends Component {
+
   static defaultProps = {
     center: {
-      lat: 44.9537,
-      lng: -93.0900
+      lat: 44.956848,
+      lng: -93.162399
     },
-    zoom: 6
+    zoom: 11
   };
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {};
-  // }
+
   render() {
     console.log('here: ', this.props.center)
     return <div className="component-discover-screen">
@@ -27,20 +24,18 @@ export default class discoverScreen extends Component {
           </div>
         </h1>
       </div>
-
       {/* Google Maps */}
-      <div style={{ marginTop: '85%', height: '60vh', width: '100%' }}>
-        <GoogleMapReact
+      <div style={{ marginTop: '78%', height: '60vh', width: '100%' }}>
+        <Link to="/overview"><GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyDxDh_GKLLuYF78nkTnS6jgzow84mNBEJU', language: 'en' }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
+          onChildMouseEnter={this.onChildMouseEnter}
+          onChildMouseLeave={this.onChildMouseLeave}
         >
         </GoogleMapReact>
+        </Link>
       </div>
     </div>;
   }
 }
-// export default connect(
-//     ({ discoverScreen }) => ({ ...discoverScreen }),
-//     dispatch => bindActionCreators({ ...discoverScreenActions }, dispatch)
-//   )( discoverScreen );

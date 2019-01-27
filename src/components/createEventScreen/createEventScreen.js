@@ -21,7 +21,3 @@ export default class createEventScreen extends Component {
     </div>;
   }
 }
-// export default connect(
-//     ({ createEventScreen }) => ({ ...createEventScreen }),
-//     dispatch => bindActionCreators({ ...createEventScreenActions }, dispatch)
-//   )( createEventScreen );

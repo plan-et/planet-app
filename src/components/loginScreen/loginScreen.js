@@ -1,3 +1,4 @@
+import Button from '@material-ui/core/Button';
 import React, { Component } from 'react';
 import './loginScreen.scss'
 import { connect } from "react-redux";
@@ -74,15 +75,11 @@ class loginScreen extends Component {
               />
             </label>
           </div>
+          
           <div>
-            <input
-              style={styles.txt}
-              type="submit"
-              name="submit"
-              value="Log In"
-            />
+          <Link to="main"><Button style={{"backgroundColor": "#00CCB8", "fontWeight":"bolder", "marginTop": "30%", "width":"50vw"}} className="button" color="primary" variant="contained"><p>Login</p></Button><br/></Link>
           </div>
-          <Link to="/" style={styles.txt}>Cancel</Link>
+          <Link to="/"><Button style={{"backgroundColor": "#FF6B12", "fontWeight":"bolder", "marginTop":"5px", "width":"50vw"}} className="button" color="secondary" variant="contained"><p>Cancel</p></Button></Link>
         </form>
       </div>
     )
@@ -91,11 +88,12 @@ class loginScreen extends Component {
 
 const styles = {
   container: {
-    marginTop: '222px',
+    marginTop: '65%',
   },
   input: {
     padding: '5px',
-    margin: 10,
+    margin: 15,
+    width: '50%'
   },
   txt: {
     fontSize: '22px',
