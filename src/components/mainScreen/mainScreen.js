@@ -16,13 +16,13 @@ export default class mainScreen extends Component {
       return <div className="component-main-screen" >
         <div style={{"backgroundImage" :  "url("+bg+")", "height": "100vh"}}>
         <div className="buttonContainer" style={{"height": "auto", "display" :"flex-box", "justify-content": "center", "align-items":"center", "paddingTop": "30vh", "paddingBottom": "10vh"}}> 
-          <p><Link to="/createEvent" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-01.svg")} style={{"height" : "17vh"}}/><br/>
+          <p><Link to="/createEvent" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-01.svg")} style={{"height" : "12vh"}}/><br/>
             Create
             </Link></p>
-          <p><Link to="/discover" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-02.svg")} style={{"height" : "17vh"}}/><br/>
+          <p><Link to="/discover" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-02.svg")} style={{"height" : "12vh"}}/><br/>
             Discover
             </Link></p>
-          <p><Link to="/myEvents" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-03.svg")} style={{"height" : "17vh"}}/><br/>
+          <p><Link to="/myEvents" style={{"textDecoration" : "none", "color" : "white"}}><img src={require("./Action-Icons-03.svg")} style={{"height" : "12vh"}}/><br/>
             My Events
             </Link></p>
         </div>
