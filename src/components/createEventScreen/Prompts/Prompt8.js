@@ -21,6 +21,7 @@ export class Prompt8_Large extends Component {
       this.setState({
         [event.target.name]: event.target.value
       });
+    };
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Do you plan on your event having entertainment, speakers, or performers?</h3>

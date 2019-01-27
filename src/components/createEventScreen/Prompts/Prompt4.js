@@ -21,6 +21,7 @@ export class Prompt4_Large extends Component {
         this.setState({
           [event.target.name]: event.target.value
         });
+    };
     
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>

@@ -21,6 +21,7 @@ export class Prompt7_Large extends Component {
       this.setState({
         [event.target.name]: event.target.value
       });
+    };
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Do you have a plan to publicize your event?</h3>

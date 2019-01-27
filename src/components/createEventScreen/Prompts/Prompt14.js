@@ -18,6 +18,7 @@ export class Prompt14_Large extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+  };
   render() {
     return <div className="component-prompt" style={{ "paddingBottom": "5vh" }}>
       <h3 style={{ "margin": "2vw" }}>Are there any miscellaneous items you need for your event?</h3>

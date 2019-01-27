@@ -21,6 +21,7 @@ export class Prompt11_Large extends Component {
       this.setState({
         [event.target.name]: event.target.value
       });
+    };
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>In case of emergency, having a safety plan is important, if not mandatory.</h3>

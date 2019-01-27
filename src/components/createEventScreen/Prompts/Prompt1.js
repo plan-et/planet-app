@@ -21,6 +21,8 @@ export class Prompt1 extends Component {
         this.setState({
           [event.target.name]: event.target.value
         });
+    };
+    
     render() {
         let size;
         return <div className="component-prompt">

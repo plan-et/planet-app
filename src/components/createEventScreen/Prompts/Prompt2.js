@@ -16,6 +16,8 @@ export class Prompt2_Large extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+  };
+  
   render() {
     return <div className="component-prompt">
       <h2 >Event Type</h2>

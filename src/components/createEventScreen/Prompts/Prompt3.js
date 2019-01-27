@@ -18,6 +18,8 @@ export class Prompt3_Large extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+  };
+  
   render() {
     return <div className="component-prompt">
       <form noValidate autoComplete="off">

@@ -21,6 +21,8 @@ export class Prompt6_Large extends Component {
       this.setState({
         [event.target.name]: event.target.value
       });
+    };
+    
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Some types of locations or events require a permit for groups over a certain size.</h3>

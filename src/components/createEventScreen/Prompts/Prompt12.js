@@ -21,6 +21,7 @@ export class Prompt12_Large extends Component {
       this.setState({
         [event.target.name]: event.target.value
       });
+    };
     render() {
         return <div className="component-prompt" style={{"paddingBottom": "5vh"}}>
           <h3 style={{"margin": "2vw"}}>Do you need fundraising for this activity?</h3>
