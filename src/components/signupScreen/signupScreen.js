@@ -7,7 +7,6 @@ import './signupScreen.scss';
 class signupScreen extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       first_name: '',
       last_name: '',
@@ -83,6 +82,7 @@ class signupScreen extends Component {
             <label htmlFor="first_name">
               First Name:
               <input
+                style={styles.input}
                 type="text"
                 name="first_name"
                 value={this.state.first_name}
@@ -94,6 +94,7 @@ class signupScreen extends Component {
             <label htmlFor="last_name">
               Last Name:
               <input
+                style={styles.input}
                 type="text"
                 name="last_name"
                 value={this.state.last_name}
@@ -102,20 +103,10 @@ class signupScreen extends Component {
             </label>
           </div>
           <div>
-            <label htmlFor="telephone">
-              Telephone:
-              <input
-                type="text"
-                name="telephone"
-                value={this.state.telephone}
-                onChange={this.handleInputChangeFor('telephone')}
-              />
-            </label>
-          </div>
-          <div>
             <label htmlFor="email">
               Email:
               <input
+                style={styles.input}
                 type="text"
                 name="email"
                 value={this.state.email}
@@ -127,6 +118,7 @@ class signupScreen extends Component {
             <label htmlFor="password">
               Password:
               <input
+                style={styles.input}
                 type="password"
                 name="password"
                 value={this.state.password}
@@ -136,11 +128,13 @@ class signupScreen extends Component {
           </div>
           <div>
             <input
+              style={styles.register}
               type="submit"
               name="submit"
               value="Register"
             />
-            <Link to="/">Cancel</Link>
+            <br />
+            <Link to="/" style={styles.cancel}>Cancel</Link>
           </div>
         </form>
       </div>
@@ -151,6 +145,18 @@ class signupScreen extends Component {
 const styles = {
   container: {
     marginTop: '222px',
+  },
+  input: {
+    padding: '5px',
+    margin: 10,
+  },
+  register: {
+    fontSize: '22px',
+    color: '#ffffff'
+  },
+  cancel: {
+    fontSize: '22px',
+    color: '#ffffff'
   }
 }
 
