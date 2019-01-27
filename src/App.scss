@@ -1,13 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Cairo');
+@import url('https://fonts.googleapis.com/css?family=Cairo:300');
+@import url('https://fonts.googleapis.com/css?family=Cairo:700');
+@import url('https://fonts.googleapis.com/css?family=Marvel');
 
-body, html {
-  background-color: #323E48;
+.button {
+  background-color: #00CCB8;
+  color: white;
 }
 
-h1 {
+// custom scss
+body, html {
+  background-image: url("Main-Screen-Background-02.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  color: white;
   font-family: 'Cairo', sans-serif;
 }
 
+h1 {
+  font-family: 'Marvel', sans-serif;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-family: 'Cairo', sans-serif;
+  text-transform: uppercase;
+}
+
+// pre-packaged scss
 .App {
   text-align: center;
 }
